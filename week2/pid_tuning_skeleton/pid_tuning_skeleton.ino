@@ -33,7 +33,7 @@ void setup()
   TCCR4C = 0x04; //toggles pin 6 at one-half the timer frequency
   TCCR4D = 0x00; //normal mode
 
-  OCR4C = <STUDENT TO FILL THIS IN>;   //TOP goes in OCR4C
+  OCR4C = 117;   //TOP goes in OCR4C
   TIMSK4 = 0x04; //enable overflow interrupt
   
   interrupts(); //re-enable interrupts
@@ -48,7 +48,7 @@ void loop()
     //clear the timer flag
     readyToPID = 0;
 
-    //for tracking previous counts
+    //for tracking previou6s counts
     static int16_t prevLeft = 0;
     static int16_t prevRight = 0;
 
